@@ -5,6 +5,7 @@ boards, but - for documentation purposes - the specific dev board that we
 have started with is the [DOIT ESP32 DEVKIT V1](https://makeradvisor.com/tools/esp32-dev-board-wi-fi-bluetooth/)
 
 ![DEVKIT V1](https://makeradvisor.com/wp-content/uploads/2017/10/esp32-board-bg.jpg)
+![Pinout](https://makeradvisor.com/wp-content/uploads/2018/04/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-Copy.jpg)
 
 * ensure you have enough power to run the ESP32 (you may need a better USB
   cable, or a second connection through the Vin/GND pins.  (If the red LED
