@@ -36,3 +36,4 @@ have started with is the [DOIT ESP32 DEVKIT V1](https://makeradvisor.com/tools/e
 * serial port permissions
 * https://github.com/adafruit/ampy
 * wifi section
+* a suggested wifi script
