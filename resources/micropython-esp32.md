@@ -11,8 +11,11 @@ have started with is the [DOIT ESP32 DEVKIT V1](https://makeradvisor.com/tools/e
   cable, or a second connection through the Vin/GND pins.  (If the red LED
   blinks then you probably have power problems)
 * ensure you have a working serial connection
-* * Install picocom ("sudo apt instll picocom")
-* * determine which usb serial port your EPS32 has installed ("sudo dmesg")
+* * Install picocom ("sudo apt install picocom")
+* * plug it in and determine which usb serial port your EPS32 has installed
+    ("sudo dmesg")
+* * Extra: ls -al /dev/ttyUSB7, confirm it is dialout
+    "id hamish && sudo usermod -a -G dialout hamish && id hamish"
 * * connect with "sudo picocom -b 115200 /dev/ttyUSB7" (note to exit picocom
     you use Ctrl-A then Ctrl-X)
 * * hit the "EN" button on your ESP32 and confirm that you see the bootup
