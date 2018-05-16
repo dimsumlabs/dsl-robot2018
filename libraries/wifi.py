@@ -1,5 +1,13 @@
 """Load a list of possible wifi networks and connect to the first matching"""
 
+# TODO
+# - set DHCP client hostname properly:
+#       xxx.config(dhcp_hostname=yyy) where yyy is based on macaddr
+# - in access_point() if ssid is none, generate one the same as hostname above
+# - If no wifi found to join, call access_point()
+# - have a function to append new network to the wifi_cfg.py file
+
+
 import network
 
 # uses a wifi_cfg.py
@@ -11,11 +19,8 @@ import network
 def access_point(ssid, psk):
     ap = network.WLAN(network.AP_IF) 
     ap.active(True)
-    # TODO - if ssid is none, autogenerate a ssid name
     ap.config(essid=ssid)
     ap.config(authmode=3, password=psk)
-
-# TODO connect station
 
 def match_wifi(scan, wifi):
     for found in scan:
@@ -45,9 +50,3 @@ def connect():
         sta.connect(ssid, psk)
     else:
         print('No matching network found\n')
-        # TODO - call access_point()
-
-
-# TODO 
-# - function to append new network to the config file
-
