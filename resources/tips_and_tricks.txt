@@ -1,0 +1,9 @@
+
+Corrupted flash filesystem:
+---------------------------
+
+From https://forum.micropython.org/viewtopic.php?f=16&t=1700&start=10#p10507
+import uos
+import flashbdev
+uos.VfsFat.mkfs(flashbdev.bdev)
+
