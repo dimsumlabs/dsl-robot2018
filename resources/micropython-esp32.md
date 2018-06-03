@@ -34,6 +34,12 @@ have started with is the [DOIT ESP32 DEVKIT V1](https://makeradvisor.com/tools/e
 * Connect with picocom again and confirm that you now have a python prompt
 * Reset (again, with the "EN" button) and read the messages
 
+# Installing our standard wifi library
+* using the werepl, upload the libraries/wifi.py file
+* look at the libraries/wifi_cfg.py file and adjust it for your wifi networks,
+  then upload that as well
+* Add this wifi library to your startup sequence with this
+  one-liner: `open('boot.py','a').write("\n\nimport wifi\nwifi.connect()\n\n")`
 
 # TODO
 * udev name rules
